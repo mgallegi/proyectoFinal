@@ -11,7 +11,10 @@
     {{ formularioMascotaMod.as_table }}
   </table>
   <br />
-  <input type="submit" value="Guardar" />
+  <input class="btn btn-success" type="submit" value="Guardar" />
+  <a href="{% url 'appAdmin' %}">
+    <button class="btn btn-danger">Volver</button>
+  </a>
 </form>
 
 {% endblock %}

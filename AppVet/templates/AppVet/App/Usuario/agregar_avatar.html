@@ -52,15 +52,22 @@
     color: white;
   }
   </style>
-  <h3>AGREGAR AVATAR</h3>
+  <h2 style="font-family: cursive">Seleccione el Avatar de su Usuario:</h2>
+  <br />
+  <br />
   <form action="{% url 'agregarAvatar' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
   
       <table>
           {{ formulario.as_table }}
       </table>
       <br>
+      
       <button type="submit" class="btn btn-warning">AGREGAR AVATAR</button>
+      
   </form>
+  <a href="{% url 'appAdmin' %}">
+    <button class="btn btn-danger">Volver</button>
+  </a>
 
 
 
